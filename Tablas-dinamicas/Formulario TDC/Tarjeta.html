@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Tarjeta</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilosTDC.css">
+</head>
+<body>
+  <h2>Formulario de Tarjeta de Crédito</h2>
+
+  <form class="formulario">
+    <label for="numerotarjeta">Número de tarjeta:</label>
+    <input type="text" id="numerotarjeta" name="numerotarjeta" required><br>
+
+    <label for="fechavencimiento">Fecha de vencimiento:</label>
+    <input type="date" id="fechavencimiento" name="fechavencimiento" required><br>
+
+    <label for="cvc">CVC:</label>
+    <input type="number" id="cvc" name="cvc" required><br>
+
+    <label for="nombretitular">Nombre del titular:</label>
+    <input type="text" id="nombretitular" name="nombretitular" required><br>
+
+    <label>Tipo de tarjeta:</label><br>
+    <input type="radio" id="visa" name="tipo" value="visa" required>
+    <img src="https://1000marcas.net/wp-content/uploads/2019/12/VISA-Logo.jpg" alt="Visa" width="50" height="30">
+    <input type="radio" id="mastercard" name="tipo" value="mastercard" required>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" width="50" height="30"><br>
+
+    <label for="contrasena">Contraseña:</label>
+    <input type="password" id="contrasena" name="contrasena" required><br>
+
+    <label for="confirmar">
+      <input type="checkbox" id="confirmar" name="confirmar" required> Los datos son correctos
+    </label><br>
+
+    <label for="talla">Talla:</label>
+    <select id="talla" name="talla" required>
+      <option value="XS">XS</option>
+      <option value="S">S</option>
+      <option value="M">M</option>
+      <option value="L">L</option>
+      <option value="XL">XL</option>
+    </select><br>
+
+    <label for="comentarios">Comentarios:</label><br>
+    <textarea id="comentarios" name="comentarios"></textarea><br>
+
+    <button type="button" id="boton">Guardar</button>
+  </form>
+
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Número de Tarjeta</th>
+        <th>Fecha de Vencimiento</th>
+        <th>CVC</th>
+        <th>Nombre del Titular</th>
+        <th>Tipo de Tarjeta</th>
+        <th>Talla</th>
+        <th>Comentarios</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+  <script src="tarjetascript.js"></script>
+</body>
+</html>
